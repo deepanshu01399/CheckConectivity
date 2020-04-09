@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorBackground"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:text="Turn on/off wifi to notify the app about connection status." />
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonbackground"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/textColor"
+            android:text="Check Connection" />
+
+        <Button
+            android:id="@+id/LightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/buttonbackground"
+            android:gravity="center_horizontal"
+            android:onClick="lightmode"
+            android:text="Light Mode"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/NightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/LightMode"
+            android:backgroundTint="@color/buttonbackground"
+            android:onClick="nighmode"
+            android:text="Night Mode"
+            android:textColor="@color/textColor" />
+
+
+    </LinearLayout>
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/NoInternetGif"
+        android:visibility="gone"
+        android:src="@drawable/nointernetgiphy"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/buttonbackground"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add_black_24dp" />
+
+</RelativeLayout>
